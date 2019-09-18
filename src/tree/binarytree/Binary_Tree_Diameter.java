@@ -1,4 +1,4 @@
-package tree;
+package tree.binarytree;
 
 /*
 * Given a binary tree you need to find the diameter of binary tree
@@ -11,9 +11,8 @@ package tree;
 *
 * */
 
-import java.util.*;
 import java.lang.*;
-import java.io.*;
+
 // A Binary Tree node
 class Node
 {
