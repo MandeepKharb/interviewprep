@@ -8,7 +8,7 @@ where k is a given positive integer smaller than or equal to length of the linke
 
 package linkedlist;
 
-public class RotateLinkedListInAGroupOfGivenSize {
+public class ReverseLinkedListInAGroupOfGivenSize {
 
     private  int a=0;
 
@@ -67,7 +67,7 @@ public class RotateLinkedListInAGroupOfGivenSize {
 
 
     public static void main(String[] args) {
-        RotateLinkedListInAGroupOfGivenSize list = new RotateLinkedListInAGroupOfGivenSize();
+        ReverseLinkedListInAGroupOfGivenSize list = new ReverseLinkedListInAGroupOfGivenSize();
 
         list.head = new Node(85);
         list.head.next = new Node(15);
