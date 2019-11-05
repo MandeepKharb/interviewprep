@@ -3,7 +3,7 @@ package tree.binarysearchtree;
 class BSTNode {
 
     int data;
-    BSTNode left, right;
+    Node left, right;
 
     BSTNode(int d) {
         data = d;
@@ -22,10 +22,10 @@ public class RecoverBST {
 
 
 
-    BSTNode previousNode;
-    BSTNode firstNode;
-    BSTNode secondNode;
-    public  void findNodes(BSTNode root ){
+    Node previousNode;
+    Node firstNode;
+    Node secondNode;
+    public  void findNodes(Node root ){
 // this method is kind of customized inorder traversal
 //first traverse left subtree, then do some processing at root and then right subtree.
         if (root ==null)
@@ -44,7 +44,7 @@ public class RecoverBST {
         findNodes(root.right);
     }
 
-    public  void recoverTree(BSTNode root){
+    public  void recoverTree(Node root){
         findNodes(root);
 // swap the firstNode and secondNode
         int val=firstNode.data;

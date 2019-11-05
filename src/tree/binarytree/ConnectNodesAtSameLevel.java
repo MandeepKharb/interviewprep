@@ -75,6 +75,7 @@ public class ConnectNodesAtSameLevel {
 
     }
 }
+// generally we can take any linear data structure to work on problems where need to deal with level wise
 
         void connect(Node root)
         {

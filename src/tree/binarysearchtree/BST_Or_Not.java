@@ -41,21 +41,37 @@ Testcases 1: The given binary tree is not BST, hence the answer is 0.
 
 package tree.binarysearchtree;
 
+
+class Node
+{
+    int data;
+    Node left, right;
+
+    public Node(int item)
+    {
+        data = item;
+        left = right = null;
+    }
+}
 public class BST_Or_Not {
 
-    public  int isBST(BSTNode root) {
+    Node root;
+
+
+    public  int isBST(Node root) {
         if (root == null)
-            return 1;
+            return 1;  // 1 is true
         if (root.left != null && root.data < findMax(root.left).data)
-            return 0;
+            return 0; // 0 is false
         if (root.right != null && root.data > findMin(root.right).data)
-            return 0;
+            return 0; // 0 is false
         if (isBST(root.left) == 0 || isBST(root.right) == 0) {
             return 0;
         } else return 1;
     }
 
-    BSTNode findMin(BSTNode root){
+
+    Node findMin(Node root){
         if(root==null)
             return null;
         while(root.left!=null)
@@ -65,7 +81,7 @@ public class BST_Or_Not {
         return root;
     }
 
-    BSTNode findMax(BSTNode root){
+    Node findMax(Node root){
         if(root==null)
             return null;
         while(root.right!=null)
@@ -73,5 +89,19 @@ public class BST_Or_Not {
             root=root.right;
         }
         return root;
+    }
+
+    public static void main(String args[])
+    {
+        BST_Or_Not tree = new BST_Or_Not();
+        tree.root = new Node(4);
+        tree.root.left = new Node(2);
+        tree.root.right = new Node(5);
+        tree.root.left.left = new Node(1);
+        tree.root.left.right = new Node(3);
+
+
+            System.out.println("IS BST"+ tree.isBST(tree.root));
+
     }
 }
