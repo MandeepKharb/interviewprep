@@ -54,7 +54,10 @@ public class MaxProductOfThreeElements {
 
 
         System.out.println("Positive values are: " + first +" " +second +" "+ " "+ third);
-        System.out.println("Positive values are: " + first +" " +second +" "+ " "+ third);
+        System.out.println("Negative values are: " + Nfirst +" " +Nsecond +" "+ " "+ Nthird);
+
+        result=first*second*third;
+
         if( result<first*Nsecond*Nthird)
         {
             result=first*Nsecond*Nthird;
