@@ -10,15 +10,15 @@ package tree.binarytree;
 
 public class LowestCommonAncestor {
 
-    public static Node LCA(Node root, Node firstNode, Node secondNode){
+    public static BTNode LCA(BTNode root, BTNode firstNode, BTNode secondNode){
         if(root == null)
             return null;
         if (root.data ==firstNode.data || root.data==secondNode.data )
             return root;
         // inorder traversal leftnode -> do processing at curent node -> right node
 
-    Node leftLCA=LCA(root.left,firstNode,secondNode);
-    Node rightLCA=LCA(root.right,firstNode,secondNode);
+    BTNode leftLCA=LCA(root.left,firstNode,secondNode);
+    BTNode rightLCA=LCA(root.right,firstNode,secondNode);
     if (leftLCA !=null && rightLCA !=null)
         return root;
 

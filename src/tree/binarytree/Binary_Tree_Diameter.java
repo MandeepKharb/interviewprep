@@ -17,7 +17,7 @@ import java.lang.*;
 class Node
 {
     int data;
-    Node left, right;
+    BTNode left, right;
     Node(int item)
     {
         data = item;
@@ -39,7 +39,7 @@ class Node
 } */
 class Tree {
     /* Complete the function to get diameter of a binary tree */
-    int diameter(Node node) {
+    int diameter(BTNode node) {
         if (node == null)
             return 0;
         int leftHeight = height(node.left);
@@ -55,7 +55,7 @@ class Tree {
 
     }
 
-    int height(Node node) {
+    int height(BTNode node) {
         if (node == null)
             return 0;
         int leftHeight = height(node.left);

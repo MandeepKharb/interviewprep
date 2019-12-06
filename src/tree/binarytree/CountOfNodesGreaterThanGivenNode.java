@@ -8,7 +8,7 @@ public class CountOfNodesGreaterThanGivenNode {
 
 
 
-    public static int nodesGreaterThanX(Node node, int k) {
+    public static int nodesGreaterThanX(BTNode node, int k) {
         if (node == null) {
             return 0;
         }

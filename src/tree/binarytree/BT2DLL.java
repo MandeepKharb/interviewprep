@@ -2,9 +2,9 @@ package tree.binarytree;
 
 public class BT2DLL {
 
-    Node head;
-    static Node prev = null;
-    Node BToDLL(Node root)
+    BTNode head;
+    static BTNode prev = null;
+    BTNode BToDLL(BTNode root)
     {
         // inorder traversal of binary tree
         //traverse left

@@ -6,7 +6,7 @@ package tree.binarytree;
 
 public class BoundryTraversalOfBT {
 
-    void printBoundary(Node node)
+    void printBoundary(BTNode node)
     {
         // Your code here
         leftNodes(node);
@@ -14,20 +14,20 @@ public class BoundryTraversalOfBT {
         rightNodes(node.right);
     }
 
-    void leftNodes(Node node){
+    void leftNodes(BTNode node){
         while (node.left!=null){
             System.out.print(node.data);
             node=node.left;
         }
     }
-    void rightNodes(Node node){
+    void rightNodes(BTNode node){
         while(node.right!=null){
             System.out.print(node.data);
             node=node.right;
         }
     }
 
-    void leafNodes(Node node){
+    void leafNodes(BTNode node){
         if(node!=null)
         {
             leafNodes(node.left);

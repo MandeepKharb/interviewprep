@@ -43,7 +43,7 @@ binarysearch(s,pivotindex-1,arr)
 public class SearchElementInSortedRotatedArray {
 
     public static int findPivot(int start,int end, int arr[]){
-        int mid = start+end/2;
+        int mid = (start+end)/2;
         if(arr[mid]>arr[mid+1])
             return mid+1;
         else{
@@ -58,7 +58,7 @@ public class SearchElementInSortedRotatedArray {
 
 
     public static int binarySearch(int key,int start,int end,int arr[]){
-        int mid = start +end/2;
+        int mid = (start +end)/2;
         if (arr[mid]==key)
             return mid;
         else if (key >=arr[mid])
@@ -68,5 +68,23 @@ public class SearchElementInSortedRotatedArray {
 
     }
 
+    public static int searchElement(){
+        int arr[]={5 ,6 ,7, 8, 9, 10, 1, 2, 3};
+        int key=7;
+        int end= arr.length-1;
+       int pivot= findPivot(0,end,arr);
+        System.out.println(pivot);
+        if (key >pivot  && key<arr[arr.length-1])
+          return   binarySearch(key,pivot+1,arr.length-1,arr); //search in second half
 
+else
+
+
+          return   binarySearch(key,pivot+1,arr.length-1,arr);//search in first half
+
+  }
+
+    public static void main(String[] args) {
+        System.out.println(searchElement());
+    }
 }

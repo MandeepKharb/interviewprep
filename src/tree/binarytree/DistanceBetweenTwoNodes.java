@@ -13,15 +13,15 @@ Dist(n1, n2) is the distance between n1 and n2.
 public class DistanceBetweenTwoNodes {
 
     // find LCA of two nodes
-    public static Node LCA(Node root, int n1, int n2)
+    public static BTNode LCA(BTNode root, int n1, int n2)
     {
         if (root == null)
             return root;
         if (root.data == n1 || root.data == n2)
             return root;
 
-        Node left = LCA(root.left, n1, n2);
-        Node right = LCA(root.right, n1, n2);
+        BTNode left = LCA(root.left, n1, n2);
+        BTNode right = LCA(root.right, n1, n2);
 
         if (left != null && right != null)
             return root;
@@ -33,7 +33,7 @@ public class DistanceBetweenTwoNodes {
 
     // Returns level of key k if it is present in
     // tree, otherwise returns -1
-    public static int findLevel(Node root, int a, int level)
+    public static int findLevel(BTNode root, int a, int level)
     {
         if (root == null)
             return -1;
@@ -45,9 +45,9 @@ public class DistanceBetweenTwoNodes {
         return left;
     }
 
-    public static int findDistance(Node root, int a, int b)
+    public static int findDistance(BTNode root, int a, int b)
     {
-        Node lca = LCA(root, a, b);
+        BTNode lca = LCA(root, a, b);
 
         int d1 = findLevel(lca, a, 0);
         int d2 = findLevel(lca, b, 0);

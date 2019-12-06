@@ -4,7 +4,7 @@ package tree.binarytree;
 
 public class TwoTreesAreIdentical {
 
-    boolean isIdentical(Node root1, Node root2)
+    boolean isIdentical(BTNode root1, BTNode root2)
     {
         //Your code here
 

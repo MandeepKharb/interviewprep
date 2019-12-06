@@ -4,10 +4,10 @@ import java.util.Stack;
 
 public class SpiralLevelOrderTraversal {
 
-    public static void spiralTraversal(Node node){
-        Stack<Node> s1 = new Stack<Node>();
+    public static void spiralTraversal(BTNode node){
+        Stack<BTNode> s1 = new Stack<BTNode>();
         // For levels to be printed from left to right
-        Stack<Node> s2 = new Stack<Node>();
+        Stack<BTNode> s2 = new Stack<BTNode>();
 
         // Push first level to first stack 's1'
         s1.push(node);
@@ -17,7 +17,7 @@ public class SpiralLevelOrderTraversal {
             // Print nodes of current level from s1 and push nodes of
             // next level to s2
             while (!s1.empty()) {
-                Node temp = s1.peek();
+                BTNode temp = s1.peek();
                 s1.pop();
                 System.out.print(temp.data + " ");
 
@@ -32,7 +32,7 @@ public class SpiralLevelOrderTraversal {
             // Print nodes of current level from s2 and push nodes of
             // next level to s1
             while (!s2.empty()) {
-                Node temp = s2.peek();
+                BTNode temp = s2.peek();
                 s2.pop();
                 System.out.print(temp.data + " ");
 
