@@ -13,6 +13,11 @@ Output:
 8 5 2
 9 6 3
 
+Approach: The approach is similar to Inplace rotate square matrix by 90 degrees | Set 1. The only thing that is different is to print the elements of cycle in clockwise direction i.e. An N x N matrix will have floor(N/2) square cycles.
+For example, a 3 X 3 matrix will have 1 cycle. The cycle is formed by its 1st row, last column, last row, and 1st column.
+For each square cycle, we swap the elements involved with the corresponding cell in the matrix in the clockwise direction. We just need a temporary variable for this.
+
+
 Let size of row and column be 3.
 During first iteration –
 a[i][j] = Element at first index (leftmost corner top)= 1.
