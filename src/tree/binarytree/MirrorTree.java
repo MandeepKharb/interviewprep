@@ -17,7 +17,7 @@ The first line of input contains T denoting the number of testcases. T testcases
 
 public class MirrorTree {
 
-    void mirror(BTNode node) {
+    void mirror(BTNod node) {
         // Your code here
 
         if (node == null)
@@ -29,7 +29,7 @@ public class MirrorTree {
             mirror(node.right);  // traverser right subtree
 
             // swap the left node with the right
-            BTNode temp = node.left;
+            BTNod temp = node.left;
             node.left = node.right;
             node.right = temp;
 

@@ -64,7 +64,7 @@ import static java.lang.Math.abs;
 
 public class HeightBalancedBT {
 
-    public static boolean isBalanced(BTNode root)
+    public static boolean isBalanced(BTNod root)
     {
         if(root==null)
         {
@@ -73,7 +73,7 @@ public class HeightBalancedBT {
         return(isBalanced(root.left)&&isBalanced(root.right)&&(abs(height(root.right)-height(root.left))<=1));
     }
 
-    public static int height(BTNode root){
+    public static int height(BTNod root){
         if(root == null)
             return 0;
         int leftHeight= height(root.left);

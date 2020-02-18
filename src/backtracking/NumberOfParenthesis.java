@@ -40,6 +40,6 @@ public class NumberOfParenthesis {
     }
 
     public static void main(String[] args) {
-        generateParenthesis(3);
+        generateParenthesis(2);
     }
 }

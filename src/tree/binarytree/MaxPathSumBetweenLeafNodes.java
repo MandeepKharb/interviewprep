@@ -36,7 +36,7 @@ public class MaxPathSumBetweenLeafNodes {
         int res = Integer.MIN_VALUE;
     }
 
-    public static int maxPathSumUtil(BTNode root, Res r){
+    public static int maxPathSumUtil(BTNod root, Res r){
 
         if (root == null)
             return 0;

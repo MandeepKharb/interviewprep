@@ -2,7 +2,7 @@ package tree.binarytree;
 
 public class BTLeftView {
     static int maxlevel;
-    void leftView(BTNode root)
+    void leftView(BTNod root)
     {
         // Your code here
         maxlevel=0;
@@ -10,7 +10,7 @@ public class BTLeftView {
         //System.out.println();
     }
 
-    void printleft(BTNode root, int level){
+    void printleft(BTNod root, int level){
 
         if(root==null) return;
 

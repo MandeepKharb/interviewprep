@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 class BTNode {
     int data;
-    BTNode left,right;
+    BTNod left,right;
     BTNode(int d)
     {
         data=d;
@@ -13,7 +13,7 @@ class BTNode {
 }
 class ConstructTreeFromGivenArrayInPreOrder
 {
-    public static void inorder(BTNode root)
+    public static void inorder(BTNod root)
     {
         if(root==null)
         return;
@@ -41,7 +41,7 @@ class ConstructTreeFromGivenArrayInPreOrder
                 preLN[i]=c;
             }
             GFG obj=new GFG();
-            BTNode root=obj.constructTree(n,pre,preLN);
+            BTNod root=obj.constructTree(n,pre,preLN);
             inorder(root);
             System.out.println();
         }
@@ -64,12 +64,12 @@ class GFG
 {
     
     int index=0;
-    BTNode constructTree(int n, int pre[], char preLN[]) {
+    BTNod constructTree(int n, int pre[], char preLN[]) {
         //Add your code here.
 
         if (index > n)
             return null;
-        BTNode node = new BTNode(pre[index]);
+        BTNod node = new BTNod(pre[index]);
         if (preLN[index++] == 'N') {
             node.left = constructTree(index, pre, preLN);
             node.right = constructTree(index, pre, preLN);

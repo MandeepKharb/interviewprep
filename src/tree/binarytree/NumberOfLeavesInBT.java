@@ -38,7 +38,7 @@ package tree.binarytree;
 
 public class NumberOfLeavesInBT {
 
-    int countLeaves(BTNode node)
+    int countLeaves(BTNod node)
     {
         // Your code
 

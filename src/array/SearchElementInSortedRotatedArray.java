@@ -80,7 +80,7 @@ public class SearchElementInSortedRotatedArray {
 else
 
 
-          return   binarySearch(key,pivot+1,arr.length-1,arr);//search in first half
+          return   binarySearch(key,0,pivot-1,arr);//search in first half
 
   }
 

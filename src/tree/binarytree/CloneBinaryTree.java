@@ -1,8 +1,11 @@
 /*
-* Given a Binary Tree having random pointers clone the Binary Tree. The task is to complete the function cloneTree which take one argument the root of the tree to be copied and should return the root of the cloned tree.
+* Given a Binary Tree having random pointers clone the Binary Tree.
+* The task is to complete the function cloneTree which take one argument the root of the tree to be copied and should return the root of the cloned tree.
 
 Input:
-The first line of input contains the no of test cases. Then T test cases follow. Each test case contains 2 lines the first line contains and integer N denoting the no of edges of the tree and then in the next line are N space separated queries .The query on tree are of three types
+The first line of input contains the no of test cases.
+Then T test cases follow. Each test case contains 2 lines the first line contains and integer N denoting the no of edges of the tree and then in the next line are N space separated queries .
+The query on tree are of three types
 a) a b L  (Represents that b is the left child of a)
 b) a b R (Represents that b is the right child of a)
 c) a b X (Represents a random pointer from node a to node b)

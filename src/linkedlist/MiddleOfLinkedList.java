@@ -21,7 +21,7 @@ public class MiddleOfLinkedList {
     public static Node middle(Node head){
         Node slow=head;
         Node fast=head;
-        while(fast.next!=null){
+        while(fast.next!=null && fast !=null){
             fast=fast.next.next;
             slow=slow.next;
         }

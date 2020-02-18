@@ -64,6 +64,7 @@ public class NQueens {
 
     public static void helper(int output[][], int n, int rowIndex)
     {
+        // exit condition from recursion
         if(rowIndex>=n)
         {
             System.out.print("[");

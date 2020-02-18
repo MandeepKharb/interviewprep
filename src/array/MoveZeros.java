@@ -14,7 +14,7 @@ Minimize the total number of operations.
 * */
 public class MoveZeros {
 
-    public void moveZeroes(int[] nums) {
+    public static int [] moveZeroes(int[] nums) {
         int lastNonZeroFoundAt=0;
 
         for(int i =0; i<nums.length; i++){
@@ -22,6 +22,7 @@ public class MoveZeros {
             if(nums[i]!=0){
                 //lastNonZeroFoundAt++;
                 nums[lastNonZeroFoundAt++]=nums[i];
+                //lastNonZeroFoundAt++;
             }
 
         }
@@ -29,5 +30,15 @@ public class MoveZeros {
         for(int j=lastNonZeroFoundAt; j<nums.length;j++){
             nums[j]=0;
         }
+
+        return nums;
+    }
+
+    public static void main(String[] args) {
+        int nums[]=moveZeroes(new int[]{0,1,0,3,12});
+        for (int arg : nums) {
+            System.out.println(arg);
+        }
+
     }
 }
